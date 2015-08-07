@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Check Android Theme colors for color reference:
+        https://developer.android.com/training/material/images/ThemeColors.png
+
+        Refer also to Color palette for the UI colors you should use:
+        http://www.google.com/design/spec/style/color.html#color-ui-color-palette
+    -->
+
+    <color name="myPrimaryColor">#8C9EFF</color>
+    <color name="myPrimaryDarkColor">#ffce9dff</color>
+    <color name="myAccentColor">#ffce9dff</color>
+    <color name="myAccentColor_transparent">#709C27B0</color>
+    <color name="myDrawerBackground">#F2F2F2</color>
+    <color name="myDayWeatherBackground">#FFA32F</color>
+    <color name="myWindowBackground">#FFFFFF</color>
+    <color name="myTextPrimaryColor">#FFFFFF</color>
+    <color name="myNavigationColor">#000000</color>
+
+    <color name="selected_gray">#ffdbdbdb</color>
+    <color name="bkg_card">#8C9EFF</color>
+
+    <color name="clear_weather">#8C9EFF</color>
+    <color name="rainy_weather">#FFA32F</color>
+    <color name="heavy_rain_weather">#03C03C</color>
+    <color name="fog_weather">#CCCFBC</color>
+    <color name="snow_weather">#91afcb</color>
+    <color name="cloudy_weather">#3E7396</color>
+</resources>

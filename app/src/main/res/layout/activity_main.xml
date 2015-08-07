@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity">
+    <!--android:background="@drawable/fog"-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background_image"
+        android:src="@drawable/thunderstorms"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"/>
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_actionbar">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:id="@+id/relativeLayout"
+            >
+            <!--android:layout_height="430dp"-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/weather_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="96sp"
+                    />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="26sp"
+                    />
+
+                <TextView
+                    android:id="@+id/weather_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="true" />
+
+            <com.melnykov.fab.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_add"
+                app:fab_colorNormal="@color/myPrimaryColor"
+                app:fab_colorPressed="@color/myPrimaryDarkColor"
+                app:fab_colorRipple="@color/myAccentColor_transparent" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dailyList"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:scrollbars="horizontal"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:fitsSystemWindows="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/myDayWeatherBackground"
+            android:layout_below="@+id/relativeLayout" />
+
+
+        </RelativeLayout>
+        <!-- android:layout_marginTop="?android:attr/actionBarSize"-->
+        <fragment
+            android:id="@+id/fragment_drawer"
+            android:name="crash.weathered.NavigationDrawerFragment"
+            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:layout="@layout/fragment_navigation_drawer"/>
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+</RelativeLayout>

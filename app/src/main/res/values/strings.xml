@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weathered</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="nav_image">/assets/nav_drawer_image.png</string>
+    <string name="title_activity_add_location">AddLocation</string>
+    <string name="locationhint">Add Location</string>
+
+    <string name="open_weather_maps_app_id">451d72e6e313205f11bbe82b0b91216d</string>
+
+</resources>
